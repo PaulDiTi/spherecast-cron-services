@@ -1,10 +1,10 @@
 # Amazon
-*/30 * * * * curl -X POST https://server.spherecast.ai/amazon_scheduler/amz_products/updates >/proc/1/fd/1 2>/proc/1/fd/2
-0 12 * * * curl -X POST https://server.spherecast.ai/amazon_scheduler/amz_shipments/updates >/proc/1/fd/1 2>/proc/1/fd/2
-0 * * * * curl -X POST https://server.spherecast.ai/amazon_scheduler/amz_orders >/proc/1/fd/1 2>/proc/1/fd/2
+*/30 * * * * curl -X POST https://server.spherecast.ai/amazon_scheduler/products/updates >/proc/1/fd/1 2>/proc/1/fd/2
+0 12 * * * curl -X POST https://server.spherecast.ai/amazon_scheduler/shipments/updates >/proc/1/fd/1 2>/proc/1/fd/2
+0 * * * * curl -X POST https://server.spherecast.ai/amazon_scheduler/orders >/proc/1/fd/1 2>/proc/1/fd/2
 
 # Billbee
-*/5 * * * * curl -X POST https://server.spherecast.ai/billbee_scheduler/billbee_products/updates >/proc/1/fd/1 2>/proc/1/fd/2
+*/5 * * * * curl -X POST https://server.spherecast.ai/billbee_scheduler/products/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # Forecast
 0 0 * * 0 curl -X POST https://server.spherecast.ai/forecast_scheduler/sku-accuracy/updates >/proc/1/fd/1 2>/proc/1/fd/2
@@ -12,10 +12,10 @@
 0 0 * * * curl -X POST https://server.spherecast.ai/forecast_scheduler/lost-revenue/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # JTL
-*/10 * * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/jtl_orders/updates >/proc/1/fd/1 2>/proc/1/fd/2
-*/5 * * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/jtl_products/updates >/proc/1/fd/1 2>/proc/1/fd/2
-0 0 * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/jtl_new_products/updates >/proc/1/fd/1 2>/proc/1/fd/2
-0 0 * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/jtl_suppliers/updates >/proc/1/fd/1 2>/proc/1/fd/2
+*/10 * * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/orders/updates >/proc/1/fd/1 2>/proc/1/fd/2
+*/5 * * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/products/updates >/proc/1/fd/1 2>/proc/1/fd/2
+0 0 * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/new_products/updates >/proc/1/fd/1 2>/proc/1/fd/2
+0 0 * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/suppliers/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # Notification
 0 12 * * * curl -X POST https://server.spherecast.ai/notification_scheduler/critical-stock/updates >/proc/1/fd/1 2>/proc/1/fd/2
@@ -30,6 +30,6 @@
 0 0 * * * curl -X POST https://server.spherecast.ai/product_scheduler/reorder-metrics/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # Stock
-0 0 * * * curl -X POST https://server.spherecast.ai/stock_scheduler/stocks/updates >/proc/1/fd/1 2>/proc/1/fd/2
+0 0 * * * curl -X POST https://server.spherecast.ai/stock_scheduler/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # An empty line is required at the end of this file for a valid cron file.
