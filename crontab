@@ -16,9 +16,9 @@
 0 0 * * * curl -X POST https://server.spherecast.ai/jtl_scheduler/suppliers/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # Notification
-0 12 * * * curl -X POST https://server.spherecast.ai/notification_scheduler/critical-stock/updates >/proc/1/fd/1 2>/proc/1/fd/2
-0 0 * * * curl -X POST https://server.spherecast.ai/notification_scheduler/overdue-po/updates >/proc/1/fd/1 2>/proc/1/fd/2
-0 0 * * 0 curl -X POST https://server.spherecast.ai/notification_scheduler/exceptional-demand/updates >/proc/1/fd/1 2>/proc/1/fd/2
+# 0 12 * * * curl -X POST https://server.spherecast.ai/notification_scheduler/critical-stock/updates >/proc/1/fd/1 2>/proc/1/fd/2
+# 0 0 * * * curl -X POST https://server.spherecast.ai/notification_scheduler/overdue-po/updates >/proc/1/fd/1 2>/proc/1/fd/2
+# 0 0 * * 0 curl -X POST https://server.spherecast.ai/notification_scheduler/exceptional-demand/updates >/proc/1/fd/1 2>/proc/1/fd/2
 
 # Order
 0 * * * * curl -X POST https://server.spherecast.ai/order_scheduler/order-views/updates >/proc/1/fd/1 2>/proc/1/fd/2
